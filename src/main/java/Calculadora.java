@@ -1,6 +1,14 @@
 
 public class Calculadora {
 
+    //METODO SUMAR
+    public int sumar(int a, int b) {
+        System.out.println("Método sumar() llamado con a = " + a + ", b = " + b);
+        int resultado = a + b;
+        System.out.println("Resultado de sumar: " + resultado);
+        return resultado;
+    }
+    
     //METODO RESTAR
     public int restar(int a, int b) {
         System.out.println("Método restar() llamado con a = " + a + ", b = " + b);
@@ -14,6 +22,18 @@ public class Calculadora {
         System.out.println("Método multiplicar() llamado con a = " + a + ", b = " + b);
         int resultado = a * b;
         System.out.println("Resultado de multiplicar: " + resultado);
+        return resultado;
+    }
+
+    //METODO DIVIDIR
+    public int dividir(int a, int b) {
+        System.out.println("Método dividir() llamado con a = " + a + ", b = " + b);
+        if (b == 0) {
+            System.out.println("⚠️ Error: intento de división por cero.");
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
+        int resultado = a / b;
+        System.out.println("Resultado de dividir: " + resultado);
         return resultado;
     }
 

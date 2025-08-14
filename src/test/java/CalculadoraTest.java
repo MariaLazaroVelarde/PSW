@@ -20,6 +20,15 @@ public class CalculadoraTest {
         System.out.println("Prueba finalizada!");
     }
 
+    // Prueba unitaria para el método sumar
+    @Test
+    void testSumar() {
+        System.out.println("Ejecutando testSumar...");
+        int resultado = calc.sumar(3, 4);
+        System.out.println("Resultado: " + resultado);
+        assertEquals(7, resultado, "La suma debe ser 7");
+    }
+
     // Prueba unitaria para el método restar
     @Test
     void testRestar() {
@@ -46,6 +55,15 @@ public class CalculadoraTest {
         resultado = calc.multiplicar(-3, 4);
         System.out.println("Probando multiplicación: -3 * 4, resultado esperado: -12, resultado obtenido: " + resultado);
         assertEquals(-12, resultado, "La multiplicación debe ser -12");
+    }
+
+    // Prueba unitaria para el método dividir
+    @Test
+    void testDividir() {
+        System.out.println("Ejecutando testDividir...");
+        int resultado = calc.dividir(12, 4);
+        System.out.println("Resultado: " + resultado);
+        assertEquals(3, resultado, "La división debe ser 3");
     }
 
     // Prueba unitaria para el método porcentaje
